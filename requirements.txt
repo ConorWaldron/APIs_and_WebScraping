@@ -1,4 +1,7 @@
-requests
 beautifulsoup4
+json
+flask
+flask-sqlalchemy
 lxml
+requests
 selenium
