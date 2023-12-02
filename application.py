@@ -11,7 +11,6 @@ class Drink(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), unique=True, nullable=False)
     description = db.Column(db.String(120))
-
     def __repr__(self):
         return f'{self.name} - {self.description}'
 
@@ -22,6 +21,13 @@ def index():
 
 
 ###################################### My API endpoints ########################################################
+
+# if the database is not found, lets make one
+@app.route('/create_db')
+def create_db():
+    with app.app_context():
+        db.create_all()
+        return 'Database created'
 
 # a Get request API
 @app.route('/drinks')
@@ -65,3 +71,7 @@ def delete_drink(id):
     db.session.commit()
     # we dont need to return anything, but lets return success message
     return {'message': f'drink id {id} was deleted'}
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
