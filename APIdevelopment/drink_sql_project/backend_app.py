@@ -38,7 +38,7 @@ def get_drinks():
     # convert  list of drink instances to list of python dictionaries
     output = []
     for drink in all_drinks:
-        drink_data = {'name': drink.name, 'description': drink.description}
+        drink_data = {'id': drink.id, 'name': drink.name, 'description': drink.description}
         output.append(drink_data)
     return {'drinks': output}
 
@@ -74,4 +74,4 @@ def delete_drink(id):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True) # for some reason this runs on http://127.0.0.1:5000

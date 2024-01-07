@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block my_body_content %}
+    <!-- Content of the page -->
+    <h1>Drinks List</h1>
+    <ul>
+        {% for drink in drinks %}
+            <li>{{ drink.name }} - {{ drink.description }}</li>
+        {% endfor %}
+    </ul>
+{% endblock my_body_content %}

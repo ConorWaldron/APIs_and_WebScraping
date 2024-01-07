@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block my_body_content %}
+    <!-- Content of the page -->
+    <h1>Add Drink</h1>
+
+    <form method="post" action="{{ url_for('add_drink') }}">
+        <label for="drink_name">Drink Name:</label>
+        <input type="text" id="drink_name" name="drink_name" required>
+        <br>
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" required>
+        <br>
+        <input type="submit" value="Add Drink">
+    </form>
+{% endblock my_body_content %}
+
+
+
+

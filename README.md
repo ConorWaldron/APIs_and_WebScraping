@@ -10,7 +10,7 @@ This directory contains a collection of python scripts for learning about web sc
 
 # API Development Projects
 1. drink_sql_project - this is a project that demonstrates how to create, query and add rows to a SQL lite database using python APIs from a front end flask app
-   * web_app.py - this is a flask webapp that enables a user to call the python APIs built in the backend_app.py
+   * web_app.py - this is a flask webapp that enables a user to call the python APIs built in the backend_app.py, it also has a templates folder with its html files
    * backend_app.py - this is a where we create the methods to add, delete, query drinks
 2. email_project - this is a project that demonstrates how to let a user send an email using a python API from a front end flask app
    * web_app.py - this is a flask webapp that enables a user to call the python APIs built in the backend_app.py

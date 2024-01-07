@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block my_body_content %}
+    <!-- Content of the page -->
+    <h1>Delete a drink from the database</h1>
+
+    <form method="post" action="{{ url_for('delete_drink') }}">
+        <label for="drink_id">Select Drink ID to Delete:</label>
+        <select id="drink_id" name="drink_id">
+            {% for drink in drinks %}
+                <option value="{{ drink.id }}">{{ drink.id }} - {{ drink.name }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <input type="submit" value="Delete Drink">
+    </form>
+{% endblock my_body_content %}
