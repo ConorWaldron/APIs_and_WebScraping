@@ -1,16 +1,12 @@
 from flask import Flask, request, redirect, url_for, render_template, flash
-import os
 import requests
-
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'nglahfolaihfjlaidhgfouidahflkjsnh' #os.environ.get('DRINKS_WEB_APP')
 
-
 # Your backend API endpoint
 backend_api_url = 'http://127.0.0.1:5000'
 
-# this is the home page of my website/flask web app
 @app.route('/')
 def home():
     return render_template('home.html', title="Conor's drinks website")
